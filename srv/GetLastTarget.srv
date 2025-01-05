@@ -1,0 +1,7 @@
+
+---
+
+# Response containing the target coordinates
+float64 x
+float64 y
+
