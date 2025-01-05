@@ -1,0 +1,18 @@
+<launch>
+    <!-- Include the simulation launch file -->
+    <include file="$(find assignment_2_2024)/launch/sim_w1.launch" />
+
+    <!-- Parameters for desired position -->
+    <param name="des_pos_x" value="0.0" />
+    <param name="des_pos_y" value="1.0" />
+
+    <!-- Running services -->
+    <node pkg="assignment_2_2024" type="wall_follow_service.py" name="wall_follower" />
+    <node pkg="assignment_2_2024" type="go_to_point_service.py" name="go_to_point" />
+    <node pkg="assignment_2_2024" type="bug_as.py" name="bug_action_service" output="screen" />
+    <node name="service_node_1" pkg="assignment_2_2024" type="service_node" output="screen"/>
+
+    <!-- Execute the launch script to run the action client node in a new terminal -->
+    <node name="launch_action_client" pkg="assignment_2_2024" type="launch_action_client.sh" output="screen"/>
+</launch>
+
