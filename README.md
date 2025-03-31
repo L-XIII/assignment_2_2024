@@ -1,5 +1,8 @@
 # Assignment 2 - Part 1
 
+### You can click here to have a look to the documentation
+   https://l-xiii.github.io/assignment_2_2024/
+   
 ## Overview
 This part of the assignment implements key components of a robot simulation in ROS, focusing on:
 
