@@ -1,0 +1,94 @@
+\hypertarget{service__node_8cpp}{}\doxysection{service\+\_\+node.\+cpp File Reference}
+\label{service__node_8cpp}\index{service\_node.cpp@{service\_node.cpp}}
+
+
+Node providing a service to get the last navigation target.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assignment\+\_\+2\+\_\+2024/\+Get\+Last\+Target.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Point.\+h\char`\"{}}\newline
+Include dependency graph for service\+\_\+node.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{service__node_8cpp_a85ac1fe02c470f98916828de9c36dade}{get\+Last\+Target}} (assignment\+\_\+2\+\_\+2024\+::\+Get\+Last\+Target\+::\+Request \&req, assignment\+\_\+2\+\_\+2024\+::\+Get\+Last\+Target\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em brief Service callback to get the last target coordinates \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{service__node_8cpp_a33fc9275b14573e8576fb4165c71fcfa}{goal\+Callback}} (const geometry\+\_\+msgs\+::\+Point\+::\+Const\+Ptr \&msg)
+\item 
+\mbox{\Hypertarget{service__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{service__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{service__node_8cpp_a96af306b16768e600600e20874546af1}\label{service__node_8cpp_a96af306b16768e600600e20874546af1}} 
+geometry\+\_\+msgs\+::\+Point \mbox{\hyperlink{service__node_8cpp_a96af306b16768e600600e20874546af1}{last\+\_\+target}}
+\begin{DoxyCompactList}\small\item\em Stores the last target coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node providing a service to get the last navigation target. 
+
+\begin{DoxyAuthor}{Author}
+Mohamed El shab 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29/03/2025
+\end{DoxyDate}
+Subscribes to\+:
+\begin{DoxyItemize}
+\item /\+Get\+\_\+\+Last\+\_\+\+Target (geometry\+\_\+msgs/\+Point)\+: Receives target updates
+\end{DoxyItemize}
+
+Services\+:
+\begin{DoxyItemize}
+\item Get\+\_\+\+Last\+\_\+\+Target (assignment\+\_\+2\+\_\+2024/\+Get\+Last\+Target)\+: Returns last target coordinates
+\end{DoxyItemize}
+
+Discription \+:
+
+This node maintains the last navigation target and provides a service to query it. It subscribes to target updates and serves the last known target coordinates. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{service__node_8cpp_a85ac1fe02c470f98916828de9c36dade}\label{service__node_8cpp_a85ac1fe02c470f98916828de9c36dade}} 
+\index{service\_node.cpp@{service\_node.cpp}!getLastTarget@{getLastTarget}}
+\index{getLastTarget@{getLastTarget}!service\_node.cpp@{service\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{getLastTarget()}{getLastTarget()}}
+{\footnotesize\ttfamily bool get\+Last\+Target (\begin{DoxyParamCaption}\item[{assignment\+\_\+2\+\_\+2024\+::\+Get\+Last\+Target\+::\+Request \&}]{req,  }\item[{assignment\+\_\+2\+\_\+2024\+::\+Get\+Last\+Target\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+brief Service callback to get the last target coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Service request \\
+\hline
+{\em res} & Service response ,containing x,y coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true (service needed) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{service__node_8cpp_a33fc9275b14573e8576fb4165c71fcfa}\label{service__node_8cpp_a33fc9275b14573e8576fb4165c71fcfa}} 
+\index{service\_node.cpp@{service\_node.cpp}!goalCallback@{goalCallback}}
+\index{goalCallback@{goalCallback}!service\_node.cpp@{service\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{goalCallback()}{goalCallback()}}
+{\footnotesize\ttfamily void goal\+Callback (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Recieved target point message \\
+\hline
+\end{DoxyParams}

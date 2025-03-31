@@ -1,0 +1,86 @@
+\hypertarget{class_action_client_node}{}\doxysection{Action\+Client\+Node Class Reference}
+\label{class_action_client_node}\index{ActionClientNode@{ActionClientNode}}
+
+
+It handles the interaction with the action server and publishes the robot state.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_action_client_node_a026ed12f1ef52e083b6efa4d3ac5fac3}\label{class_action_client_node_a026ed12f1ef52e083b6efa4d3ac5fac3}} 
+\mbox{\hyperlink{class_action_client_node_a026ed12f1ef52e083b6efa4d3ac5fac3}{Action\+Client\+Node}} ()
+\begin{DoxyCompactList}\small\item\em a constructor that initializes the action client and R\+OS interfaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_action_client_node_ad7ad7cccab1c70aef1694d1cb6916f22}{send\+Goal}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Send a navigation goal to the action server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_action_client_node_af1745fdb37b88778ff324a5980d64da6}\label{class_action_client_node_af1745fdb37b88778ff324a5980d64da6}} 
+void \mbox{\hyperlink{class_action_client_node_af1745fdb37b88778ff324a5980d64da6}{cancel\+Goal}} ()
+\begin{DoxyCompactList}\small\item\em It cancel the current navigation goal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_action_client_node_ae72767648423d99080a51b928dceaef3}\label{class_action_client_node_ae72767648423d99080a51b928dceaef3}} 
+void \mbox{\hyperlink{class_action_client_node_ae72767648423d99080a51b928dceaef3}{publish\+Position\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em publish the robot\textquotesingle{}s position and velocity \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_action_client_node_a2df4eedb33bd9cdb6c4a514ce9ec0d78}{handle\+Feedback}} (const assignment\+\_\+2\+\_\+2024\+::\+Planning\+Feedback\+::\+Const\+Ptr \&feedback)
+\begin{DoxyCompactList}\small\item\em handle feedback from the action server \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_action_client_node_ab061cda397ed27e312bb76c479f9ad6f}{done\+Cb}} (const actionlib\+::\+Simple\+Client\+Goal\+State \&state, const assignment\+\_\+2\+\_\+2024\+::\+Planning\+Result\+::\+Const\+Ptr \&result)
+\begin{DoxyCompactList}\small\item\em Callback for when the goal is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It handles the interaction with the action server and publishes the robot state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_action_client_node_ab061cda397ed27e312bb76c479f9ad6f}\label{class_action_client_node_ab061cda397ed27e312bb76c479f9ad6f}} 
+\index{ActionClientNode@{ActionClientNode}!doneCb@{doneCb}}
+\index{doneCb@{doneCb}!ActionClientNode@{ActionClientNode}}
+\doxysubsubsection{\texorpdfstring{doneCb()}{doneCb()}}
+{\footnotesize\ttfamily void Action\+Client\+Node\+::done\+Cb (\begin{DoxyParamCaption}\item[{const actionlib\+::\+Simple\+Client\+Goal\+State \&}]{state,  }\item[{const assignment\+\_\+2\+\_\+2024\+::\+Planning\+Result\+::\+Const\+Ptr \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback for when the goal is done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Final state of the goal \\
+\hline
+{\em result} & Result message from the action server \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_action_client_node_a2df4eedb33bd9cdb6c4a514ce9ec0d78}\label{class_action_client_node_a2df4eedb33bd9cdb6c4a514ce9ec0d78}} 
+\index{ActionClientNode@{ActionClientNode}!handleFeedback@{handleFeedback}}
+\index{handleFeedback@{handleFeedback}!ActionClientNode@{ActionClientNode}}
+\doxysubsubsection{\texorpdfstring{handleFeedback()}{handleFeedback()}}
+{\footnotesize\ttfamily void Action\+Client\+Node\+::handle\+Feedback (\begin{DoxyParamCaption}\item[{const assignment\+\_\+2\+\_\+2024\+::\+Planning\+Feedback\+::\+Const\+Ptr \&}]{feedback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+handle feedback from the action server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedback} & pointer to the feedback message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_action_client_node_ad7ad7cccab1c70aef1694d1cb6916f22}\label{class_action_client_node_ad7ad7cccab1c70aef1694d1cb6916f22}} 
+\index{ActionClientNode@{ActionClientNode}!sendGoal@{sendGoal}}
+\index{sendGoal@{sendGoal}!ActionClientNode@{ActionClientNode}}
+\doxysubsubsection{\texorpdfstring{sendGoal()}{sendGoal()}}
+{\footnotesize\ttfamily void Action\+Client\+Node\+::send\+Goal (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Send a navigation goal to the action server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & (The target x coordinate) \\
+\hline
+{\em y} & (The target y coordinate) ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{action__client__node_8cpp}{action\+\_\+client\+\_\+node.\+cpp}}\end{DoxyCompactItemize}
